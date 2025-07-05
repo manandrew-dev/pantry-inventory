@@ -1,4 +1,5 @@
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, View } from 'react-native';
+import PantryItem from '../components/PantryItem';
 
 const DATA = [
     { id: '1', name: 'Milk', expiryDate: '2025-07-15' },
@@ -12,7 +13,7 @@ const Home = () => {
           data={DATA}
             renderItem={({ item }) => (
             <View>
-              <Text>{item.name}</Text>
+              <PantryItem name={item.name} expiryDate={item.expiryDate}/>
             </View>
           )}
           keyExtractor={item => item.id}

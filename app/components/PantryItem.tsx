@@ -9,10 +9,12 @@ type PantryItemProps = {
 const PantryItem = ({ name, expiryDate, onPress }: PantryItemProps) => {
     return (
         <TouchableOpacity
-
-
+            onPress={onPress}
+            activeOpacity={0.7}
+            className="p-4 border-b border-gray-300"
         >
             <Text className="text-lg font-semibold">{name}</Text>
+            <Text className="text-sm text-gray-500">Expires: {expiryDate}</Text>
         </TouchableOpacity>
     );
 };
